@@ -3,13 +3,27 @@ from utils import extract_resume_text, fetch_all_jobs, match_resume_to_jobs, get
 import pandas as pd
 import html
 
-st.set_page_config(page_title="AI Resume Matcher", layout="wide")
-st.markdown(
-    "<h2 style='margin-bottom:0; background: linear-gradient(90deg, #A78BFA, #F472B6, #FBBF24); "
-    "-webkit-background-clip: text; -webkit-text-fill-color: transparent; "
-    "display: inline-block;'>📄 AI Resume Analyzer & Job Matcher</h2>",
-    unsafe_allow_html=True
-)
+st.set_page_config(page_title="IntelliResume", layout="wide")
+
+st.markdown("""
+<h2 style="
+    margin-bottom:0;
+    background: linear-gradient(90deg, #A78BFA, #F472B6, #FBBF24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+">
+📄 IntelliResume
+</h2>
+
+<p style="
+    color:#9CA3AF;
+    font-size:18px;
+    margin-top:5px;
+">
+Smart Resume Analysis & Job Matching
+</p>
+""", unsafe_allow_html=True)
 
 st.markdown("""<style>
 :root {
