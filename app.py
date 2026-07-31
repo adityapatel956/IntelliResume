@@ -204,7 +204,7 @@ tech_stack = st.sidebar.text_input("Filter by Tech Stack (e.g., Python, JavaScri
 
 # Groq API key: prefer st.secrets (for deployed apps), fall back to
 # a manual sidebar input (for local testing without a secrets file)
-st.sidebar.header("AI Suggestions")
+
 try:
     gemini_api_key = st.secrets["GROQ_API_KEY"]
 except Exception:
@@ -213,6 +213,7 @@ except Exception:
         type="password",
         help="Get a free key at https://console.groq.com/keys"
     )
+
 
 # File uploader
 uploaded_file = st.file_uploader("Upload your resume (PDF only)", type=["pdf"])
